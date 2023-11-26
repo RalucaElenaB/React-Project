@@ -1,21 +1,22 @@
-import { HiBookOpen, HiAcademicCap } from "react-icons/hi";
+import { HiBookOpen, HiAcademicCap } from 'react-icons/hi';
+
 const Sidebar = () => {
   const menuItems = [
     {
-      id: "1",
-      name: "University",
+      id: '1',
+      name: 'University',
       icon: <HiAcademicCap />,
     },
     {
-      id: "2",
-      name: "Faculties",
+      id: '2',
+      name: 'Faculties',
       icon: <HiBookOpen />,
     },
   ];
 
   return (
     <ul className="sidebar">
-      {menuItems.map((item) => (
+      {menuItems.map(item => (
         <li key={item.id}>
           {item.icon} {item.name}
         </li>

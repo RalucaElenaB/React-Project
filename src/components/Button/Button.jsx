@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import PropTypes from "prop-types";
+import { css } from '@emotion/react';
+import PropTypes from 'prop-types';
 
 const Button = ({ label }) => {
-  const color = "white";
+  const color = 'white';
 
   const style = css`
     padding: 12px;
