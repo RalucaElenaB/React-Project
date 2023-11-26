@@ -1,6 +1,5 @@
-/** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const Button = ({ label }) => {
   const color = 'white';
@@ -19,8 +18,8 @@ const Button = ({ label }) => {
   return <button css={style}>{label}</button>;
 };
 
-Button.PropTypes = {
-  label: PropTypes.string.isRequired,
+Button.propTypes = {
+  label: propTypes.string.isRequired,
 };
 
 export default Button;
