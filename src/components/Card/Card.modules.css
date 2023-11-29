@@ -1,6 +1,10 @@
 .card {
   display: flex;
   gap: 16px;
+  background: white;
+  margin-left: 32px;
+  margin-right: 32px;
+  box-shadow: 0px 4px 10px 0px #00000040;
 }
 
 .cardAvatar {
@@ -12,6 +16,7 @@
   align-items: center;
   justify-content: center;
   height: 200px;
+  background: white;
 }
 
 .cardAvatar img {
