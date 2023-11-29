@@ -1,4 +1,5 @@
 import { HiBookOpen, HiAcademicCap } from 'react-icons/hi';
+import styles from './Sidebar.module.css';
 
 const Sidebar = () => {
   const menuItems = [
@@ -15,13 +16,16 @@ const Sidebar = () => {
   ];
 
   return (
-    <ul className="sidebar">
-      {menuItems.map(item => (
-        <li key={item.id}>
-          {item.icon} {item.name}
-        </li>
-      ))}
-    </ul>
+    <div className={styles.sidebar}>
+      <div className={styles.sidebarBrandBox}></div>
+      <ul>
+        {menuItems.map(item => (
+          <li key={item.id}>
+            {item.icon} {item.name}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

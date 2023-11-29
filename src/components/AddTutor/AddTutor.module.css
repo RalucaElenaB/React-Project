@@ -1,0 +1,20 @@
+.addTutorForm {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 16px 0;
+}
+
+.addTutorForm input {
+  padding: 8px 16px;
+  max-width: 300px;
+}
+
+.addTutorForm button {
+  padding: 8px 16px;
+  max-width: 100px;
+  background: #ffe0b2;
+  gap: 10px;
+}

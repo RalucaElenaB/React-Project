@@ -1,32 +1,61 @@
 import React, { Component } from 'react';
 import styles from './Tutors.module.css';
+import Icon from '../Icons/Icons';
 
 class Tutors extends Component {
   renderList = items => {
     return items.map(el => {
-      //   console.dir(el);
       const name = `${el.firstName} ${el.lastName}`;
 
       return (
-        <div className={styles.tutorsList}>
-          <div key={el.id} className={styles.tutorsListItem}>
-            <div>{name}</div>
-            <div className={styles.address}>
-              <span>{el.email}</span>
-              <span>{el.telephone}</span>
-              <span>{el.location}</span>
-            </div>
-            <div>{el.role}</div>
+        <div key={el.id} className={styles.tutorsListItem}>
+          <div>{name}</div>
+          <div className={styles.address}>
+            <span>{el.email}</span>
+            <span>{el.telephone}</span>
+            <span>{el.location}</span>
           </div>
+          <div>{el.role}</div>
         </div>
       );
     });
   };
 
   render() {
-    // console.dir(this.props);
     const { list } = this.props;
-    return <div className="{styles.tutorsList}">{this.renderList(list)}</div>;
+
+    return (
+      <section className="section">
+        <h1>
+          <Icon variant="cat" label="Tutors" />
+          <span>Tutors</span>
+        </h1>
+        <div className={`box ${styles.tutorsList}`}>
+          {this.renderList(list)}
+        </div>
+      </section>
+    );
+
+    // return (
+    //   <div className={styles.tutorsList}>
+    //     {list.map((el) => {
+    //       console.log(el);
+    //       const name = `${el.firstName} ${el.lastName}`;
+
+    //       return (
+    //         <div key={el.id} className={styles.tutorsListItem}>
+    //           <div>{name}</div>
+    //           <div className={styles.address}>
+    //             <span>{el.email}</span>
+    //             <span>{el.telephone}</span>
+    //             <span>{el.location}</span>
+    //           </div>
+    //           <div>{el.role}</div>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    // );
   }
 }
 

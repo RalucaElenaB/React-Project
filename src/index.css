@@ -1,5 +1,5 @@
 body {
-  /* margin: 0; */
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(249, 249, 249);
+  background-color: rgb(240, 236, 236);
 }
 
 code {
@@ -18,30 +18,42 @@ code {
     monospace;
 }
 
+.App {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 8px;
+}
+
 main {
   width: 1440px;
   margin: 0 auto;
 }
 
-.sidebar {
-  background-color: #fefefe;
-  margin-left: 16px;
-  /* display: flex; */
-  flex-direction: colomn;
-  gap: 16px;
-  list-style-type: none;
-  width: 200px;
-  padding: 16px 8px;
+.section {
+  margin-top: 32px;
 }
 
-.sidebar li {
-  color: #ff6b0a;
+.section h1 {
   font-family: Montserrat;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 1.25px;
-  text-transform: uppercase;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.box {
+  background: white;
+}
+
+.box:hover {
+  box-shadow: 0px 4px 10px 0px #00000040;
+}
+
+.mt-16 {
+  margin-top: 16px;
 }

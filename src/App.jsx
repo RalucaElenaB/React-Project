@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
-import Card from './components/Card/Card';
-import Button from './components/Button/Button';
+import University from './components/University/University';
+import Button from './components/Buttons/Button.jsx';
 import Tutors from 'components/Tutors/Tutors';
-import emojiTutors from './images/emojiTutors.png';
+// import emojiTutors from './images/emojiTutors.png';
+import AddTutor from './components/AddTutor/AddTutor';
 
-export default class App extends Component {
+class App extends Component {
+  state = {
+    isTutorAddPanelVisible: false,
+  };
+
   tutors = [
     {
       id: 1,
@@ -19,17 +24,53 @@ export default class App extends Component {
   ];
 
   render() {
+    const { isTutorAddPanelVisible } = this.state;
+
     return (
       <main className="App">
+        {/* <div style={{ textAlign: 'right', marginTop: '20px' }}>
+          <h3>UNIVERSITY INFORMATION</h3>
+        </div> */}
+
         <Sidebar />
-        <Card />
-        {/* <Button label="Add Tutor" /> */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+
+        <section className="container">
+          <University />
+
+          {/* <Button label="Add Tutor" /> */}
+
+          {/* <div style={{ display: 'flex', alignItems: 'center' }}>
           <img src={emojiTutors} alt="emoji tutors" />
-          <h2 style={{ marginLeft: '10px' }}>TUTORS</h2>
-        </div>
-        <Tutors list={this.tutors} />
+          <h3 style={{ marginLeft: '10px' }}>TUTORS</h3>
+        </div> */}
+
+          <Tutors list={this.tutors} />
+
+          {isTutorAddPanelVisible && (
+            <AddTutor
+              hideForm={() =>
+                this.setState({
+                  isTutorAddPanelVisible: false,
+                })
+              }
+            />
+          )}
+
+          <div className={'mt-16'}>
+            <Button
+              action={() =>
+                this.setState({
+                  isTutorAddPanelVisible: true,
+                })
+              }
+            >
+              Add Tutors
+            </Button>
+          </div>
+        </section>
       </main>
     );
   }
 }
+
+export default App;
