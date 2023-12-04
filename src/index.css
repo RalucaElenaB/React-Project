@@ -25,6 +25,12 @@ code {
   gap: 8px;
 }
 
+.container {
+  background: lightgrey;
+  padding: 16px;
+  max-width: 1300px;
+}
+
 main {
   width: 1440px;
   margin: 0 auto;
@@ -34,7 +40,7 @@ main {
   margin-top: 32px;
 }
 
-.section h1 {
+.section h2 {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 700;
